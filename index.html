@@ -2,11 +2,88 @@
 Online HTML, CSS and JavaScript editor to run code online.
 -->
 <!DOCTYPE html>
+<title>
+    <index>
+    
+</title>
 <html lang="en">
+
+<head>
+    <style>
+    h1 { 
+      display: block;
+      font-size: 2em;
+      margin-top: 0.67em;
+      margin-bottom: 0.67em;
+      margin-left: 0;
+      margin-right: 0;
+      font-weight: bold;
+    }
+    
+
+    p {
+        font-size: 1.1em;
+    }
+
+    body {
+    max-width: 1200px;
+    margin: 8px auto 8px auto;
+    position: relative;
+    }
+    body > header {
+    height: 2px;
+    }
+
+    </style>
+    </head>
+
+<h1 align="center" id="t1">El 11 Ideal: <br>
+    Un Enfoque Data-Driven para el Dise&#241;o de un Equipo de Futbol
+</h1>
+
+<article>
+    <ul>
+        <li>
+            <p align="">
+
+                El problema de evaluar el rendimiento de los futbolistas está despertando el
+                interés de muchas empresas y de la comunidad científica, gracias a la disponibilidad
+                de datos masivos que capturan todos los eventos generados durante un partido (p. ej.,
+                entradas, pases, tiros, etc.). Desafortunadamente, no existe una métrica consolidada
+                y ampliamente aceptada para medir la calidad del desempeño en todas sus facetas. 
+                En este artículo, diseñamos e implementamos un ranking de jugadores basado en 
+                datos que ofrece una evaluación justificada de como distintos atributos contribuyen
+                aumentar la probabilidad de victoria de un equipo.
+            </p>
+        </li>
+        <li>
+            <p align="">
+            
+                Usando dos conjuntos de datos, el primero con información a nivel de equipo desde el año 2017 al 2022
+                para la primera división del futbol chileno determinamos el desempeño de los equipos clasificándolos
+                en victoria y no victoria. El segundo set de datos contiene información de todos los jugadores
+                chilenos en competencia. Basándonos en el criterio experto, desarrollados un procedimiento
+                de co-ocurrencia donde detectamos los atributos comunes existentes en ambos sets de datos. 
+                Con estos atributos comunes entrenamos un modelo que nos permite obtener el ponderador para
+                cada atributo y con ellos construir el ranking por jugador.
+            </p>
+        </li>
+        <li>
+            <p align="">
+                Finalmente clasificamos a cada jugador de acuerdo con su rol en el equipo: Arquero, Defensa, 
+                Lateral Derecho, Lateral Izquierdo, Mediocampista Defensivo, Mediocampista, Mediocampista Ofensivo
+                y Delantero. Con esto extendemos el ranking por posición y podemos conformar un plantel que 
+                maximizaría la probabilidad de victoria de un equipo.
+            </p>
+        </li>
+    </ul>
+</article>
+
+
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <div>
-    <div id="8e71659b-40f6-4ba4-a65c-8f37f602922f" class="plotly-graph-div" style="height:100%; width:100%;"></div>
+    <div id="8e71659b-40f6-4ba4-a65c-8f37f602922f" class="plotly-graph-div" style="height:100%; width:110%;"></div>
     <script type="text/javascript">
         window.PLOTLYENV = window.PLOTLYENV || {};
         if (document.getElementById("8e71659b-40f6-4ba4-a65c-8f37f602922f")) {
@@ -568,12 +645,16 @@ Online HTML, CSS and JavaScript editor to run code online.
                     }
                 },
                 "title": {
-                    "text": "Ranking de Jugadores Chilenos por Posici\u00f3n"
+                    "text": "Ranking de Jugadores Chilenos por Posición",
+                    "font":{"family":"Arial Black",
+                     "color":"black", 
+                     "size":16}, 
+                     "x":0.5, "xanchor":"center", "y":0.85, "yanchor":"top"
                 },
                 "xaxis": {
                     "showgrid": false,
                     "title": {
-                        "text": "role"
+                        "text": ""
                     },
                     "zeroline": true,
                     "zerolinewidth": 2
@@ -581,7 +662,7 @@ Online HTML, CSS and JavaScript editor to run code online.
                 "yaxis": {
                     "showgrid": false,
                     "title": {
-                        "text": "Score"
+                        "text": ""
                     },
                     "zeroline": true
                 }
@@ -592,5 +673,32 @@ Online HTML, CSS and JavaScript editor to run code online.
         };
     </script>
 </div>
+
+
+<article>
+    <ul>
+        <li>
+            <p align="">
+                Nota: La figura 5, muestra los resultados del ranking agregado para cada uno 
+                de los futbolistas chilenos clasificados por posición. Se confirman los resultados 
+                encontrados en las secciones anteriores, como, por ejemplo, el mejor desempeño promedio
+                de los mediocampistas y más bajo para los laterales, delanteros y arquero. 
+                De esta figura también es posible deducir la distribución de jugadores para
+                cada posición y detectar los de mejor desempeño. Siguiendo la estructura de la figura 5 el
+                mejor desempeño de los mediocampistas ofensivos lo obtiene Cesar Cortés de Magallanes,
+                de los mediocampistas defensivos lo obtiene Lorenzo Reyes de Ñublense,
+                para los mediocampistas el mejor es Felipe Méndez de Unión Española, 
+                dentro de los laterales izquierdos la mejor puntuación la obtiene Juan Duma de Barnechea. 
+                El mejor lateral derecho es Juan Soto de Cobreloa. Según nuestro modelo el mejor delantero
+                es Eduardo Vargas de Atlético Mineiro. Dentro de los defensas existe menos dispersión y
+                una alta concentración del ranking en torno a la media, donde el mejor defensa es Nicolas 
+                Ramírez de Huachipato. Finalmente, bajo esta metodología el mejor arquero es Vicente Reyes
+                de Atalanta United 2. Para más detalle visitar https://sebabecerra.github.io/Futbol-Ranking/
+                Fuente: Elaboración propia en base a Wyscout.
+
+            </p>
+        </li>
+    </ul>
+</article>
 
 </html>
